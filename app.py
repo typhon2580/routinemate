@@ -1,3 +1,4 @@
+import os
 from datetime import date, datetime
 
 from flask import Flask, render_template, redirect, url_for, request, flash
@@ -15,8 +16,13 @@ from werkzeug.security import generate_password_hash, check_password_hash
 
 app = Flask(__name__)
 
-app.config["SECRET_KEY"] = "routinemate-secret-key"
-app.config["SQLALCHEMY_DATABASE_URI"] = "sqlite:///routinemate.db"
+app.config["SECRET_KEY"] = os.environ.get("SECRET_KEY", "routinemate-secret-key")
+
+if os.environ.get("VERCEL"):
+    app.config["SQLALCHEMY_DATABASE_URI"] = "sqlite:////tmp/routinemate.db"
+else:
+    app.config["SQLALCHEMY_DATABASE_URI"] = "sqlite:///routinemate.db"
+
 app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = False
 
 db = SQLAlchemy(app)
