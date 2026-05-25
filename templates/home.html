@@ -1,0 +1,53 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<section class="hero-section rounded-4 shadow-sm p-5 text-center">
+    <h1 class="display-5 fw-bold mb-3">Plan Your Day with RoutineMate</h1>
+
+    <p class="lead mb-4">
+        RoutineMate helps you create, manage, track, and complete your daily routine tasks
+        with a clean and simple dashboard.
+    </p>
+
+    <div class="d-flex justify-content-center gap-3 flex-wrap">
+        <a href="{{ url_for('register') }}" class="btn btn-primary btn-lg px-4">
+            Get Started
+        </a>
+
+        <a href="{{ url_for('login') }}" class="btn btn-outline-primary btn-lg px-4">
+            Login
+        </a>
+    </div>
+</section>
+
+<section class="row mt-5 g-4">
+    <div class="col-md-4">
+        <div class="feature-card p-4 shadow-sm rounded-4 h-100">
+            <h5 class="fw-bold">Create Routines</h5>
+            <p class="text-muted mb-0">
+                Add tasks with date, time, category, priority, and status.
+            </p>
+        </div>
+    </div>
+
+    <div class="col-md-4">
+        <div class="feature-card p-4 shadow-sm rounded-4 h-100">
+            <h5 class="fw-bold">Track Progress</h5>
+            <p class="text-muted mb-0">
+                View your daily completion percentage using a progress bar.
+            </p>
+        </div>
+    </div>
+
+    <div class="col-md-4">
+        <div class="feature-card p-4 shadow-sm rounded-4 h-100">
+            <h5 class="fw-bold">Stay Organised</h5>
+            <p class="text-muted mb-0">
+                Filter tasks by status, category, and priority.
+            </p>
+        </div>
+    </div>
+</section>
+
+{% endblock %}

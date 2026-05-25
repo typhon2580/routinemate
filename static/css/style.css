@@ -1,0 +1,76 @@
+body {
+    background: #f5f7fb;
+    color: #1f2937;
+}
+
+.hero-section {
+    background: linear-gradient(135deg, #ffffff, #e8f0ff);
+}
+
+.feature-card,
+.dashboard-card,
+.task-card,
+.auth-card,
+.form-card {
+    background: #ffffff;
+    border: 1px solid #e5e7eb;
+}
+
+.auth-card {
+    max-width: 450px;
+}
+
+.form-card {
+    max-width: 850px;
+}
+
+.dashboard-card {
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.dashboard-card:hover,
+.task-card:hover,
+.feature-card:hover {
+    transform: translateY(-3px);
+}
+
+.task-card {
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.completed-task {
+    opacity: 0.75;
+    background: #f1fdf5;
+}
+
+.completed-task h5 {
+    text-decoration: line-through;
+}
+
+.badge {
+    font-weight: 500;
+}
+
+.progress {
+    background-color: #e5e7eb;
+    border-radius: 50px;
+}
+
+.progress-bar {
+    font-weight: 600;
+}
+
+footer {
+    border-top: 1px solid #e5e7eb;
+    background: #ffffff;
+}
+
+@media (max-width: 768px) {
+    .hero-section {
+        padding: 2rem !important;
+    }
+
+    .display-5 {
+        font-size: 2rem;
+    }
+}

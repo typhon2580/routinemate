@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="auth-card mx-auto shadow-sm rounded-4 p-4">
+    <h2 class="fw-bold mb-3 text-center">Login</h2>
+    <p class="text-muted text-center mb-4">
+        Welcome back. Continue managing your routine.
+    </p>
+
+    <form method="POST">
+        <div class="mb-3">
+            <label class="form-label">Email</label>
+            <input 
+                type="email" 
+                name="email" 
+                class="form-control" 
+                placeholder="Enter your email"
+                required
+            >
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label">Password</label>
+            <input 
+                type="password" 
+                name="password" 
+                class="form-control" 
+                placeholder="Enter your password"
+                required
+            >
+        </div>
+
+        <button type="submit" class="btn btn-primary w-100">
+            Login
+        </button>
+    </form>
+
+    <p class="text-center mt-3 mb-0">
+        New to RoutineMate?
+        <a href="{{ url_for('register') }}">Create account</a>
+    </p>
+</div>
+
+{% endblock %}
